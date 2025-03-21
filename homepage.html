@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Botão Sair no canto superior direito -->
+    <div class="logout-container">
+        <button id="logoutBtn" class="logout-btn" onclick="logout()">Sair</button>
+    </div>
+    
+    <div class="container">
+        <div class="logo">
+            <h1>Site do Benigno</h1>
+        </div>
+        
+        <div class="welcome-container">
+            <h2 id="welcomeMessage">Bem-vindo(a)!</h2>
+            <button id="learnMoreBtn" class="primary-btn" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Saiba mais</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let user = JSON.parse(localStorage.getItem("currentUser"));
+            if (user) {
+                document.getElementById("welcomeMessage").innerText = `Bem-vindo(a), ${user.name}!`;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem("currentUser");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

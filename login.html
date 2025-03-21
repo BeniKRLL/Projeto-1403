@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Site do Benigno</h1>
+        </div>
+        
+        <div class="form-container">
+            <h2>Digite o seu e-mail para continuar</h2>
+            <p class="subtitle">Entre no site com a sua conta. Se você não tiver conta, precisará criar uma.</p>
+            
+            <div class="input-group">
+                <input type="email" id="loginEmail" placeholder="E-mail" oninput="validateLoginFields()" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" id="loginPassword" placeholder="Senha" oninput="validateLoginFields()" required>
+            </div>
+            
+            <button id="loginBtn" class="primary-btn" onclick="login()" disabled>Continuar</button>
+            
+            <p id="loginFeedback" class="feedback"></p>
+            
+            <p class="service-info">O site faz parte do projeto pessoal</p>
+            <p class="service-description">Com sua conta, você pode acessar todos os recursos e funcionalidades exclusivas.</p>
+        </div>
+        
+        <div class="register-link">
+            <button class="secondary-btn" onclick="window.location.href='cadastro.html'">Não tem uma conta? Faça seu cadastro</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Estilo combinando o formato Disney+ com a paleta de cores escura */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(18, 18, 18);
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #1e1e1e;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 400px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #f4f4f4;
+}
+
+h2 {
+    color: #f4f4f4;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #f4f4f4;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: rgb(116, 0, 25);
+}
+
+.primary-btn {
+    background: #9c0022;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.primary-btn:hover {
+    background: #740019;
+}
+
+.primary-btn:disabled {
+    background: #5c0014;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #f4f4f4;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.secondary-btn:hover {
+    color: #9c0022;
+}
+
+.register-link, .login-link {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.feedback {
+    color: #ff6b6b;
+    margin: 10px 0;
+    min-height: 20px;
+}
+
+.service-info {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.service-description {
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+/* Adicione estas regras ao seu arquivo style.css */
+
+/* Container para o botão de Logout */
+.logout-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.logout-btn {
+    background: #9c0022;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.logout-btn:hover {
+    background: #740019;
+}
+
+/* Estilos para a seção de boas-vindas */
+.welcome-container {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.welcome-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Ajuste para que o container da homepage fique mais adequado */
+body:has(.welcome-container) .container {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Estas são as regras para adicionar a imagem de fundo */
+body {
+    font-family: Arial, sans-serif;
+    /* Configuração da imagem de fundo */
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Fallback caso a imagem não carregue */
+    background-color: #121212;
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Overlay escuro para garantir legibilidade */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.75); /* Escurecimento para legibilidade */
+    z-index: -1;
+}
